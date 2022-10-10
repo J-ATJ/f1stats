@@ -49,8 +49,8 @@
     color: var(--text);
     font-size: 1rem;
     height: 25px;
-    margin: 5px 1%;
-    min-width: 90px;
+    margin: 4px 1%;
+    min-width: 100px;
     width: 8%;
 }
 
