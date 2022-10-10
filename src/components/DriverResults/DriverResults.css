@@ -30,6 +30,7 @@
     min-width: 150px;
     margin: 0 auto;
     height: 25px;
+    border-radius: 5px;
 }
 
 .main__div__DriverResults .hide .hideBtn:hover {
@@ -48,8 +49,10 @@
     min-width: 90px;
     margin: 5px 1%;
     height: 25px;
+    border-radius: 5px;
 }
 
 .main__div__DriverResults .btn:hover {
     cursor: pointer;
+    background-color: #ddd;
 }

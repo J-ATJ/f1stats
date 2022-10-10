@@ -57,6 +57,18 @@ export function DriverResults() {
     setZhoState(true);
   }
 
+  const redbull = "#0210cf";
+  const ferrari = "#ff3333";
+  const mercedes = "#3bed9a";
+  const mclaren = "#faaa00";
+  const alpine = "#4184f0";
+  const astonMartin = "#07542b";
+  const alphaTauri = "#647482";
+  const alfaRomeo = "#94132f";
+  const williams = "#01154a";
+  const haas = "#bababf";
+  const lineWidth = 3;
+
   return (
     <div className="main__div__DriverResults">
       <h1>Drivers Results 2022</h1>
@@ -70,65 +82,65 @@ export function DriverResults() {
           <YAxis reversed={true} domain={[1, 20]} scale="linear" />
           <Tooltip />
 
-          <Line type="basic" dataKey="Verstappen" stroke="#0210cf" fill="#0210cf" strokeWidth={2} animationDuration={1000} hide={verState} id="Verstappen" />
-          <Line type="basic" dataKey="Pérez" stroke="#0210cf" strokeWidth={2} animationDuration={1000} strokeDasharray="8 3" hide={perState} id="Perez" />
+          <Line type="basic" dataKey="Verstappen" stroke={redbull} fill={redbull} strokeWidth={lineWidth} animationDuration={1000} hide={verState} />
+          <Line type="basic" dataKey="Pérez" stroke={redbull} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={perState} />
 
-          <Line type="basic" dataKey="Leclerc" stroke="#ff3333" fill="#ff3333" strokeWidth={2} animationDuration={1000} hide={lecState} id="Leclerc" />
-          <Line type="basic" dataKey="Sainz" stroke="#ff3333" strokeWidth={2} animationDuration={1000} strokeDasharray="8 3" hide={saiState} id="Sainz" />
+          <Line type="basic" dataKey="Leclerc" stroke={ferrari} fill={ferrari} strokeWidth={lineWidth} animationDuration={1000} hide={lecState} />
+          <Line type="basic" dataKey="Sainz" stroke={ferrari} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={saiState} />
 
-          <Line type="basic" dataKey="Hamilton" stroke="#3bed9a" fill="#3bed9a" strokeWidth={2} animationDuration={1000} hide={hamState} id="Hamilton" />
-          <Line type="basic" dataKey="Russell" stroke="#3bed9a" strokeWidth={2} animationDuration={1000} strokeDasharray="8 3" hide={rusState} id="Russell" />
+          <Line type="basic" dataKey="Hamilton" stroke={mercedes} fill={mercedes} strokeWidth={lineWidth} animationDuration={1000} hide={hamState} />
+          <Line type="basic" dataKey="Russell" stroke={mercedes} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={rusState} />
 
-          <Line type="basic" dataKey="Norris" stroke="#faaa00" fill="#faaa00" strokeWidth={2} animationDuration={1000} hide={norState} id="Norris" />
-          <Line type="basic" dataKey="Ricciardo" stroke="#faaa00" strokeWidth={2} animationDuration={1000} strokeDasharray="8 3" hide={ricState} id="Ricciardo" />
+          <Line type="basic" dataKey="Norris" stroke={mclaren} fill={mclaren} strokeWidth={lineWidth} animationDuration={1000} hide={norState} />
+          <Line type="basic" dataKey="Ricciardo" stroke={mclaren} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={ricState} />
 
-          <Line type="basic" dataKey="Ocon" stroke="#4184f0" fill="#4184f0" strokeWidth={2} animationDuration={1000} hide={ocoState} id="Ocon" />
-          <Line type="basic" dataKey="Alonso" stroke="#4184f0" strokeWidth={2} animationDuration={1000} strokeDasharray="8 3" hide={aloState} id="Alonso" />
+          <Line type="basic" dataKey="Ocon" stroke={alpine} fill={alpine} strokeWidth={lineWidth} animationDuration={1000} hide={ocoState} id="Ocon" />
+          <Line type="basic" dataKey="Alonso" stroke={alpine} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={aloState} />
 
-          <Line type="basic" dataKey="Stroll" stroke="#07542b" fill="#07542b" strokeWidth={2} animationDuration={1000} hide={strState} id="Stroll" />
-          <Line type="basic" dataKey="Vettel" stroke="#07542b" strokeWidth={2} animationDuration={1000} strokeDasharray="8 3" hide={vetState} id="Vettel" />
+          <Line type="basic" dataKey="Stroll" stroke={astonMartin} fill={astonMartin} strokeWidth={lineWidth} animationDuration={1000} hide={strState} />
+          <Line type="basic" dataKey="Vettel" stroke={astonMartin} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={vetState} />
 
-          <Line type="basic" dataKey="Gasly" stroke="#647482" fill="#647482" strokeWidth={2} animationDuration={1000} hide={gasState} id="Gasly" />
-          <Line type="basic" dataKey="Tsunoda" stroke="#647482" strokeWidth={2} animationDuration={1000} strokeDasharray="8 3" hide={tsuState} id="Tsunoda" />
+          <Line type="basic" dataKey="Gasly" stroke={alphaTauri} fill={alphaTauri} strokeWidth={lineWidth} animationDuration={1000} hide={gasState} />
+          <Line type="basic" dataKey="Tsunoda" stroke={alphaTauri} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={tsuState} />
 
-          <Line type="basic" dataKey="Bottas" stroke="#94132f" fill="#94132f" strokeWidth={2} animationDuration={1000} hide={botState} id="Bottas" />
-          <Line type="basic" dataKey="Zhou" stroke="#94132f" strokeWidth={2} animationDuration={1000} strokeDasharray="8 3" hide={zhoState} id="Zhou" />
+          <Line type="basic" dataKey="Bottas" stroke={alfaRomeo} fill={alfaRomeo} strokeWidth={lineWidth} animationDuration={1000} hide={botState} />
+          <Line type="basic" dataKey="Zhou" stroke={alfaRomeo} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={zhoState} />
 
-          <Line type="basic" dataKey="Albon" stroke="#01154a" fill="#01154a" strokeWidth={2} animationDuration={1000} hide={albState} id="Albon" />
-          <Line type="basic" dataKey="Latifi" stroke="#01154a" strokeWidth={2} animationDuration={1000} strokeDasharray="8 3" hide={latState} id="Latifi" />
+          <Line type="basic" dataKey="Albon" stroke={williams} fill={williams} strokeWidth={lineWidth} animationDuration={1000} hide={albState} />
+          <Line type="basic" dataKey="Latifi" stroke={williams} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={latState} />
 
-          <Line type="basic" dataKey="Magnussen" stroke="#bababf" fill="#bababf" strokeWidth={2} animationDuration={1000} hide={magState} id="Magnussen" />
-          <Line type="basic" dataKey="Schumacher" stroke="#bababf" strokeWidth={2} animationDuration={1000} strokeDasharray="8 3" hide={schState} id="Vettel" />
+          <Line type="basic" dataKey="Magnussen" stroke={haas} fill={haas} strokeWidth={lineWidth} animationDuration={1000} hide={magState} />
+          <Line type="basic" dataKey="Schumacher" stroke={haas} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={schState} />
 
         </LineChart>
 
       </ResponsiveContainer>
 
       <div className="hide">
-        <button className="hideBtn" onClick={hide}>Hide All</button>
+        <button className="hideBtn"style={{ border: `solid 1px #000` }}  onClick={hide}>Hide All</button>
       </div>
 
       <div className="btns">
-        <button className="btn" onClick={() => { console.log("toggle"); setVerState(!verState); }}>Verstappen</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setPerState(!perState); }}>Perez</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setLecState(!lecState); }}>Leclerc</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setSaiState(!saiState); }}>Sainz</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setHamState(!hamState); }}>Hamilton</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setRusState(!rusState); }}>Russell</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setNorState(!norState); }}>Norris</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setRicState(!ricState); }}>Ricciardo</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setOcoState(!ocoState); }}>Ocon</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setAloState(!aloState); }}>Alonso</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setStrState(!strState); }}>Stroll</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setVetState(!vetState); }}>Vettel</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setGasState(!gasState); }}>Gasly</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setTsuState(!tsuState); }}>Tsunoda</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setBotState(!botState); }}>Bottas</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setZhoState(!zhoState); }}>Zhou</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setAlbState(!albState); }}>Albon</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setLatState(!latState); }}>Latifi</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setMagState(!magState); }}>Magnussen</button>
-        <button className="btn" onClick={() => { console.log("toggle"); setSchState(!schState); }}>Schumacher</button>
+        <button className="btn" style={{ border: `solid 1px ${redbull}` }} onClick={() => { console.log("toggle"); setVerState(!verState); }}>Verstappen</button>
+        <button className="btn" style={{ border: `solid 1px ${redbull}` }} onClick={() => { console.log("toggle"); setPerState(!perState); }}>Perez</button>
+        <button className="btn" style={{ border: `solid 1px ${ferrari}` }} onClick={() => { console.log("toggle"); setLecState(!lecState); }}>Leclerc</button>
+        <button className="btn" style={{ border: `solid 1px ${ferrari}` }} onClick={() => { console.log("toggle"); setSaiState(!saiState); }}>Sainz</button>
+        <button className="btn" style={{ border: `solid 1px ${mercedes}` }} onClick={() => { console.log("toggle"); setHamState(!hamState); }}>Hamilton</button>
+        <button className="btn" style={{ border: `solid 1px ${mercedes}` }} onClick={() => { console.log("toggle"); setRusState(!rusState); }}>Russell</button>
+        <button className="btn" style={{ border: `solid 1px ${mclaren}` }} onClick={() => { console.log("toggle"); setNorState(!norState); }}>Norris</button>
+        <button className="btn" style={{ border: `solid 1px ${mclaren}` }} onClick={() => { console.log("toggle"); setRicState(!ricState); }}>Ricciardo</button>
+        <button className="btn" style={{ border: `solid 1px ${alpine}` }} onClick={() => { console.log("toggle"); setOcoState(!ocoState); }}>Ocon</button>
+        <button className="btn" style={{ border: `solid 1px ${alpine}` }} onClick={() => { console.log("toggle"); setAloState(!aloState); }}>Alonso</button>
+        <button className="btn" style={{ border: `solid 1px ${astonMartin}` }} onClick={() => { console.log("toggle"); setStrState(!strState); }}>Stroll</button>
+        <button className="btn" style={{ border: `solid 1px ${astonMartin}` }} onClick={() => { console.log("toggle"); setVetState(!vetState); }}>Vettel</button>
+        <button className="btn" style={{ border: `solid 1px ${alphaTauri}` }} onClick={() => { console.log("toggle"); setGasState(!gasState); }}>Gasly</button>
+        <button className="btn" style={{ border: `solid 1px ${alphaTauri}` }} onClick={() => { console.log("toggle"); setTsuState(!tsuState); }}>Tsunoda</button>
+        <button className="btn" style={{ border: `solid 1px ${alfaRomeo}` }} onClick={() => { console.log("toggle"); setBotState(!botState); }}>Bottas</button>
+        <button className="btn" style={{ border: `solid 1px ${alfaRomeo}` }} onClick={() => { console.log("toggle"); setZhoState(!zhoState); }}>Zhou</button>
+        <button className="btn" style={{ border: `solid 1px ${williams}` }} onClick={() => { console.log("toggle"); setAlbState(!albState); }}>Albon</button>
+        <button className="btn" style={{ border: `solid 1px ${williams}` }} onClick={() => { console.log("toggle"); setLatState(!latState); }}>Latifi</button>
+        <button className="btn" style={{ border: `solid 1px ${haas}` }} onClick={() => { console.log("toggle"); setMagState(!magState); }}>Magnussen</button>
+        <button className="btn" style={{ border: `solid 1px ${haas}` }} onClick={() => { console.log("toggle"); setSchState(!schState); }}>Schumacher</button>
       </div>
 
 
