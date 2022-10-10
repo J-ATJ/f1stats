@@ -78,7 +78,7 @@ export function DriverResults() {
 
   return (
     <div className="main__div__DriverResults">
-      <h1>Drivers Results {year}</h1>
+      <h1>Driver Results {year}</h1>
       <ResponsiveContainer aspect={3.7} className='responsive__container'>
         <LineChart
           data={data}
