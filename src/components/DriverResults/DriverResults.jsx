@@ -67,7 +67,9 @@ export function DriverResults() {
   const alfaRomeo = "#94132f";
   const williams = "#01154a";
   const haas = "#bababf";
+
   const lineWidth = 3;
+  const time = 2100;
 
   return (
     <div className="main__div__DriverResults">
@@ -80,37 +82,37 @@ export function DriverResults() {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="round" />
           <YAxis reversed={true} domain={[1, 20]} scale="linear" />
-          <Tooltip />
+          <Tooltip isAnimationActive={false}/>
 
-          <Line type="basic" dataKey="Verstappen" stroke={redbull} fill={redbull} strokeWidth={lineWidth} animationDuration={1000} hide={verState} />
-          <Line type="basic" dataKey="Pérez" stroke={redbull} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={perState} />
+          <Line type="basic" dataKey="Verstappen" stroke={redbull} fill={redbull} strokeWidth={lineWidth} animationDuration={time} hide={verState} />
+          <Line type="basic" dataKey="Pérez" stroke={redbull} strokeWidth={lineWidth} animationDuration={time} strokeDasharray="8 3" hide={perState} />
 
-          <Line type="basic" dataKey="Leclerc" stroke={ferrari} fill={ferrari} strokeWidth={lineWidth} animationDuration={1000} hide={lecState} />
-          <Line type="basic" dataKey="Sainz" stroke={ferrari} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={saiState} />
+          <Line type="basic" dataKey="Leclerc" stroke={ferrari} fill={ferrari} strokeWidth={lineWidth} animationDuration={time} hide={lecState} />
+          <Line type="basic" dataKey="Sainz" stroke={ferrari} strokeWidth={lineWidth} animationDuration={time} strokeDasharray="8 3" hide={saiState} />
 
-          <Line type="basic" dataKey="Hamilton" stroke={mercedes} fill={mercedes} strokeWidth={lineWidth} animationDuration={1000} hide={hamState} />
-          <Line type="basic" dataKey="Russell" stroke={mercedes} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={rusState} />
+          <Line type="basic" dataKey="Hamilton" stroke={mercedes} fill={mercedes} strokeWidth={lineWidth} animationDuration={time} hide={hamState} />
+          <Line type="basic" dataKey="Russell" stroke={mercedes} strokeWidth={lineWidth} animationDuration={time} strokeDasharray="8 3" hide={rusState} />
 
-          <Line type="basic" dataKey="Norris" stroke={mclaren} fill={mclaren} strokeWidth={lineWidth} animationDuration={1000} hide={norState} />
-          <Line type="basic" dataKey="Ricciardo" stroke={mclaren} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={ricState} />
+          <Line type="basic" dataKey="Norris" stroke={mclaren} fill={mclaren} strokeWidth={lineWidth} animationDuration={time} hide={norState} />
+          <Line type="basic" dataKey="Ricciardo" stroke={mclaren} strokeWidth={lineWidth} animationDuration={time} strokeDasharray="8 3" hide={ricState} />
 
-          <Line type="basic" dataKey="Ocon" stroke={alpine} fill={alpine} strokeWidth={lineWidth} animationDuration={1000} hide={ocoState} id="Ocon" />
-          <Line type="basic" dataKey="Alonso" stroke={alpine} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={aloState} />
+          <Line type="basic" dataKey="Ocon" stroke={alpine} fill={alpine} strokeWidth={lineWidth} animationDuration={time} hide={ocoState} id="Ocon" />
+          <Line type="basic" dataKey="Alonso" stroke={alpine} strokeWidth={lineWidth} animationDuration={time} strokeDasharray="8 3" hide={aloState} />
 
-          <Line type="basic" dataKey="Stroll" stroke={astonMartin} fill={astonMartin} strokeWidth={lineWidth} animationDuration={1000} hide={strState} />
-          <Line type="basic" dataKey="Vettel" stroke={astonMartin} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={vetState} />
+          <Line type="basic" dataKey="Stroll" stroke={astonMartin} fill={astonMartin} strokeWidth={lineWidth} animationDuration={time} hide={strState} />
+          <Line type="basic" dataKey="Vettel" stroke={astonMartin} strokeWidth={lineWidth} animationDuration={time} strokeDasharray="8 3" hide={vetState} />
 
-          <Line type="basic" dataKey="Gasly" stroke={alphaTauri} fill={alphaTauri} strokeWidth={lineWidth} animationDuration={1000} hide={gasState} />
-          <Line type="basic" dataKey="Tsunoda" stroke={alphaTauri} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={tsuState} />
+          <Line type="basic" dataKey="Gasly" stroke={alphaTauri} fill={alphaTauri} strokeWidth={lineWidth} animationDuration={time} hide={gasState} />
+          <Line type="basic" dataKey="Tsunoda" stroke={alphaTauri} strokeWidth={lineWidth} animationDuration={time} strokeDasharray="8 3" hide={tsuState} />
 
-          <Line type="basic" dataKey="Bottas" stroke={alfaRomeo} fill={alfaRomeo} strokeWidth={lineWidth} animationDuration={1000} hide={botState} />
-          <Line type="basic" dataKey="Zhou" stroke={alfaRomeo} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={zhoState} />
+          <Line type="basic" dataKey="Bottas" stroke={alfaRomeo} fill={alfaRomeo} strokeWidth={lineWidth} animationDuration={time} hide={botState} />
+          <Line type="basic" dataKey="Zhou" stroke={alfaRomeo} strokeWidth={lineWidth} animationDuration={time} strokeDasharray="8 3" hide={zhoState} />
 
-          <Line type="basic" dataKey="Albon" stroke={williams} fill={williams} strokeWidth={lineWidth} animationDuration={1000} hide={albState} />
-          <Line type="basic" dataKey="Latifi" stroke={williams} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={latState} />
+          <Line type="basic" dataKey="Albon" stroke={williams} fill={williams} strokeWidth={lineWidth} animationDuration={time} hide={albState} />
+          <Line type="basic" dataKey="Latifi" stroke={williams} strokeWidth={lineWidth} animationDuration={time} strokeDasharray="8 3" hide={latState} />
 
-          <Line type="basic" dataKey="Magnussen" stroke={haas} fill={haas} strokeWidth={lineWidth} animationDuration={1000} hide={magState} />
-          <Line type="basic" dataKey="Schumacher" stroke={haas} strokeWidth={lineWidth} animationDuration={1000} strokeDasharray="8 3" hide={schState} />
+          <Line type="basic" dataKey="Magnussen" stroke={haas} fill={haas} strokeWidth={lineWidth} animationDuration={time} hide={magState} />
+          <Line type="basic" dataKey="Schumacher" stroke={haas} strokeWidth={lineWidth} animationDuration={time} strokeDasharray="8 3" hide={schState} />
 
         </LineChart>
 
