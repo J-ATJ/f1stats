@@ -13,6 +13,8 @@ import {
 
 
 export function DriverResults() {
+  const [year, setYear] = useState("2022");
+
   const [albState, setAlbState] = useState(false);
   const [aloState, setAloState] = useState(false);
   const [botState, setBotState] = useState(false);
@@ -60,23 +62,23 @@ export function DriverResults() {
   const [defaultColor, setDefaultColor] = useState(true);
   const [mode, setMode] = useState("Dark");
 
-  const redbull = "#1f2fff";
-  const ferrari = "#ff3f3f";
-  const mercedes = "#3fef9f";
-  const mclaren = "#ffaf0f";
+  const alfaRomeo = "#8f2f3f";
+  const alphaTauri = "#6f7f8f";
   const alpine = "#4f9fff";
   const astonMartin = "#1f6f3f";
-  const alphaTauri = "#6f7f8f";
-  const alfaRomeo = "#8f2f3f";
-  const williams = "#3f4f7f";
+  const ferrari = "#ff3f3f";
   const haas = "#bfbfbf";
+  const mclaren = "#ffaf0f";
+  const mercedes = "#3fef9f";
+  const redbull = "#1f2fff";
+  const williams = "#3f4f7f";
 
   const lineWidth = 3;
   const time = 2100;
 
   return (
     <div className="main__div__DriverResults">
-      <h1>Drivers Results 2022</h1>
+      <h1>Drivers Results {year}</h1>
       <ResponsiveContainer aspect={3.7} className='responsive__container'>
         <LineChart
           data={data}
@@ -149,28 +151,27 @@ export function DriverResults() {
       </div>
 
       <div className="btns">
-        <button className="btn" style={{ border: `solid 1px ${redbull}` }} onClick={() => { console.log("toggle"); setVerState(!verState); }}>Verstappen</button>
-        <button className="btn" style={{ border: `solid 1px ${redbull}` }} onClick={() => { console.log("toggle"); setPerState(!perState); }}>Perez</button>
-        <button className="btn" style={{ border: `solid 1px ${ferrari}` }} onClick={() => { console.log("toggle"); setLecState(!lecState); }}>Leclerc</button>
-        <button className="btn" style={{ border: `solid 1px ${ferrari}` }} onClick={() => { console.log("toggle"); setSaiState(!saiState); }}>Sainz</button>
-        <button className="btn" style={{ border: `solid 1px ${mercedes}` }} onClick={() => { console.log("toggle"); setHamState(!hamState); }}>Hamilton</button>
-        <button className="btn" style={{ border: `solid 1px ${mercedes}` }} onClick={() => { console.log("toggle"); setRusState(!rusState); }}>Russell</button>
-        <button className="btn" style={{ border: `solid 1px ${mclaren}` }} onClick={() => { console.log("toggle"); setNorState(!norState); }}>Norris</button>
-        <button className="btn" style={{ border: `solid 1px ${mclaren}` }} onClick={() => { console.log("toggle"); setRicState(!ricState); }}>Ricciardo</button>
-        <button className="btn" style={{ border: `solid 1px ${alpine}` }} onClick={() => { console.log("toggle"); setOcoState(!ocoState); }}>Ocon</button>
-        <button className="btn" style={{ border: `solid 1px ${alpine}` }} onClick={() => { console.log("toggle"); setAloState(!aloState); }}>Alonso</button>
-        <button className="btn" style={{ border: `solid 1px ${astonMartin}` }} onClick={() => { console.log("toggle"); setStrState(!strState); }}>Stroll</button>
-        <button className="btn" style={{ border: `solid 1px ${astonMartin}` }} onClick={() => { console.log("toggle"); setVetState(!vetState); }}>Vettel</button>
-        <button className="btn" style={{ border: `solid 1px ${alphaTauri}` }} onClick={() => { console.log("toggle"); setGasState(!gasState); }}>Gasly</button>
-        <button className="btn" style={{ border: `solid 1px ${alphaTauri}` }} onClick={() => { console.log("toggle"); setTsuState(!tsuState); }}>Tsunoda</button>
-        <button className="btn" style={{ border: `solid 1px ${alfaRomeo}` }} onClick={() => { console.log("toggle"); setBotState(!botState); }}>Bottas</button>
-        <button className="btn" style={{ border: `solid 1px ${alfaRomeo}` }} onClick={() => { console.log("toggle"); setZhoState(!zhoState); }}>Zhou</button>
-        <button className="btn" style={{ border: `solid 1px ${williams}` }} onClick={() => { console.log("toggle"); setAlbState(!albState); }}>Albon</button>
-        <button className="btn" style={{ border: `solid 1px ${williams}` }} onClick={() => { console.log("toggle"); setLatState(!latState); }}>Latifi</button>
-        <button className="btn" style={{ border: `solid 1px ${haas}` }} onClick={() => { console.log("toggle"); setMagState(!magState); }}>Magnussen</button>
-        <button className="btn" style={{ border: `solid 1px ${haas}` }} onClick={() => { console.log("toggle"); setSchState(!schState); }}>Schumacher</button>
+        <button className="btn" style={{ border: `solid 1px ${redbull}` }} onClick={() => { setVerState(!verState); }}>Verstappen</button>
+        <button className="btn" style={{ border: `solid 1px ${redbull}` }} onClick={() => { setPerState(!perState); }}>Pérez</button>
+        <button className="btn" style={{ border: `solid 1px ${ferrari}` }} onClick={() => { setLecState(!lecState); }}>Leclerc</button>
+        <button className="btn" style={{ border: `solid 1px ${ferrari}` }} onClick={() => { setSaiState(!saiState); }}>Sainz</button>
+        <button className="btn" style={{ border: `solid 1px ${mercedes}` }} onClick={() => { setHamState(!hamState); }}>Hamilton</button>
+        <button className="btn" style={{ border: `solid 1px ${mercedes}` }} onClick={() => { setRusState(!rusState); }}>Russell</button>
+        <button className="btn" style={{ border: `solid 1px ${mclaren}` }} onClick={() => { setNorState(!norState); }}>Norris</button>
+        <button className="btn" style={{ border: `solid 1px ${mclaren}` }} onClick={() => { setRicState(!ricState); }}>Ricciardo</button>
+        <button className="btn" style={{ border: `solid 1px ${alpine}` }} onClick={() => { setOcoState(!ocoState); }}>Ocon</button>
+        <button className="btn" style={{ border: `solid 1px ${alpine}` }} onClick={() => { setAloState(!aloState); }}>Alonso</button>
+        <button className="btn" style={{ border: `solid 1px ${astonMartin}` }} onClick={() => { setStrState(!strState); }}>Stroll</button>
+        <button className="btn" style={{ border: `solid 1px ${astonMartin}` }} onClick={() => { setVetState(!vetState); }}>Vettel</button>
+        <button className="btn" style={{ border: `solid 1px ${alphaTauri}` }} onClick={() => { setGasState(!gasState); }}>Gasly</button>
+        <button className="btn" style={{ border: `solid 1px ${alphaTauri}` }} onClick={() => { setTsuState(!tsuState); }}>Tsunoda</button>
+        <button className="btn" style={{ border: `solid 1px ${alfaRomeo}` }} onClick={() => { setBotState(!botState); }}>Bottas</button>
+        <button className="btn" style={{ border: `solid 1px ${alfaRomeo}` }} onClick={() => { setZhoState(!zhoState); }}>Zhou</button>
+        <button className="btn" style={{ border: `solid 1px ${williams}` }} onClick={() => { setAlbState(!albState); }}>Albon</button>
+        <button className="btn" style={{ border: `solid 1px ${williams}` }} onClick={() => { setLatState(!latState); }}>Latifi</button>
+        <button className="btn" style={{ border: `solid 1px ${haas}` }} onClick={() => { setMagState(!magState); }}>Magnussen</button>
+        <button className="btn" style={{ border: `solid 1px ${haas}` }} onClick={() => { setSchState(!schState); }}>Schumacher</button>
       </div>
-
 
     </div >
   )

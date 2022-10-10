@@ -1,66 +1,60 @@
 .main__div__DriverResults {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    width: 90%;
     justify-content: center;
-    align-items: center;
     margin: 0 auto;
-    /* border: solid violet; */
+    width: 90%;
 }
 
 .main__div__DriverResults h1 {
-    /* border: solid red; */
-    text-align: center;
-    width: 100%;
+    color: var(--text);
     margin: 0 0 5px 0;
     padding: 20px 0;
-    color: var(--text);
-}
-
-.main__div__DriverResults .responsive__container {
-    /* border: solid black; */
+    text-align: center;
+    width: 100%;
 }
 
 .main__div__DriverResults .hide {
-    /* border: solid brown; */
-    width: 100%;
     display: flex;
     padding: 20px 0;
+    width: 100%;
 }
 
 .main__div__DriverResults .hide .hideBtn {
-    width: 12%;
-    min-width: 150px;
-    margin: 0 auto;
-    height: 25px;
-    border-radius: 5px;
     background-color: var(--back-dark);
+    border-radius: 5px;
     color: var(--text);
+    font-size: 1rem;
+    height: 25px;
+    margin: 0 auto;
+    min-width: 150px;
+    width: 12%;
 }
 
 .main__div__DriverResults .hide .hideBtn:hover {
-    cursor: pointer;
     background-color: var(--btn-bG-c);
+    cursor: pointer;
 }
 
 .main__div__DriverResults .btns {
-    /* border: solid gray; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .main__div__DriverResults .btn {
-    width: 8%;
-    min-width: 90px;
-    margin: 5px 1%;
-    height: 25px;
-    border-radius: 5px;
     background-color: var(--back-dark);
+    border-radius: 5px;
     color: var(--text);
+    font-size: 1rem;
+    height: 25px;
+    margin: 5px 1%;
+    min-width: 90px;
+    width: 8%;
 }
 
 .main__div__DriverResults .btn:hover {
-    cursor: pointer;
     background-color: var(--btn-bG-c);
+    cursor: pointer;
 }
