@@ -80,7 +80,7 @@ export function DriverResults() {
           className="lineChart"
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="round" />
+          <XAxis dataKey="raceCode" />
           <YAxis reversed={true} domain={[1, 20]} scale="linear" />
           <Tooltip isAnimationActive={false}/>
 
@@ -119,7 +119,7 @@ export function DriverResults() {
       </ResponsiveContainer>
 
       <div className="hide">
-        <button className="hideBtn"style={{ border: `solid 1px #000` }}  onClick={hide}>Hide All</button>
+        <button className="hideBtn"style={{ border: `solid 1px #000` }}  onClick={hide}>Clear</button>
       </div>
 
       <div className="btns">
