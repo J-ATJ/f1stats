@@ -57,6 +57,9 @@ export function DriverResults() {
     setZhoState(true);
   }
 
+  const [defaultColor, setDefaultColor] = useState(true);
+  const [mode, setMode] = useState("Dark");
+
   const redbull = "#1f2fff";
   const ferrari = "#ff3f3f";
   const mercedes = "#3fef9f";
@@ -74,7 +77,7 @@ export function DriverResults() {
   return (
     <div className="main__div__DriverResults">
       <h1>Drivers Results 2022</h1>
-      <ResponsiveContainer aspect={3.5} className='responsive__container'>
+      <ResponsiveContainer aspect={3.7} className='responsive__container'>
         <LineChart
           data={data}
           className="lineChart"
@@ -82,7 +85,7 @@ export function DriverResults() {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="raceCode" />
           <YAxis reversed={true} domain={[1, 20]} scale="linear" />
-          <Tooltip isAnimationActive={false}/>
+          <Tooltip isAnimationActive={false} />
 
           <Line type="basic" dataKey="Verstappen" stroke={redbull} fill={redbull} strokeWidth={lineWidth} animationDuration={time} hide={verState} />
           <Line type="basic" dataKey="Pérez" stroke={redbull} strokeWidth={lineWidth} animationDuration={time} strokeDasharray="8 3" hide={perState} />
@@ -119,7 +122,30 @@ export function DriverResults() {
       </ResponsiveContainer>
 
       <div className="hide">
-        <button className="hideBtn"style={{ border: `solid 1px #000` }}  onClick={hide}>Clear</button>
+        <button className="hideBtn" style={{ border: `solid 1px #333` }} onClick={hide}>Clear</button>
+        <button
+          className="hideBtn" style={{ border: `solid 1px #333` }}
+          id="colors"
+          onClick={() => {
+
+            if (defaultColor) {
+              document.documentElement.style.setProperty('--bG-c', '#000');
+              document.documentElement.style.setProperty('--text', '#fff');
+              document.documentElement.style.setProperty('--btn-bG-c', '#818181');
+              setMode("Light");
+              setDefaultColor(!defaultColor);
+            } else {
+              document.documentElement.style.setProperty('--bG-c', '#fff');
+              document.documentElement.style.setProperty('--text', '#000');
+              document.documentElement.style.setProperty('--btn-bG-c', '#d1d1d1');
+              setMode("Dark");
+              setDefaultColor(!defaultColor);
+            }
+
+          }}
+        >
+          {mode}
+        </button>
       </div>
 
       <div className="btns">

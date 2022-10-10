@@ -5,23 +5,24 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    border: solid violet;
+    /* border: solid violet; */
 }
 
 .main__div__DriverResults h1 {
-    border: solid red;
+    /* border: solid red; */
     text-align: center;
     width: 100%;
-    margin: 0;
+    margin: 0 0 5px 0;
     padding: 20px 0;
+    color: var(--text);
 }
 
 .main__div__DriverResults .responsive__container {
-    border: solid black;
+    /* border: solid black; */
 }
 
 .main__div__DriverResults .hide {
-    border: solid brown;
+    /* border: solid brown; */
     width: 100%;
     display: flex;
     padding: 20px 0;
@@ -33,14 +34,17 @@
     margin: 0 auto;
     height: 25px;
     border-radius: 5px;
+    background-color: var(--back-dark);
+    color: var(--text);
 }
 
 .main__div__DriverResults .hide .hideBtn:hover {
     cursor: pointer;
+    background-color: var(--btn-bG-c);
 }
 
 .main__div__DriverResults .btns {
-    border: solid gray;
+    /* border: solid gray; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -52,9 +56,11 @@
     margin: 5px 1%;
     height: 25px;
     border-radius: 5px;
+    background-color: var(--back-dark);
+    color: var(--text);
 }
 
 .main__div__DriverResults .btn:hover {
     cursor: pointer;
-    background-color: #ddd;
+    background-color: var(--btn-bG-c);
 }
