@@ -12,6 +12,8 @@
     border: solid red;
     text-align: center;
     width: 100%;
+    margin: 0;
+    padding: 20px 0;
 }
 
 .main__div__DriverResults .responsive__container {

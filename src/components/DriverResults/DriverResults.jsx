@@ -57,16 +57,16 @@ export function DriverResults() {
     setZhoState(true);
   }
 
-  const redbull = "#0210cf";
-  const ferrari = "#ff3333";
-  const mercedes = "#3bed9a";
-  const mclaren = "#faaa00";
-  const alpine = "#4184f0";
-  const astonMartin = "#07542b";
-  const alphaTauri = "#647482";
-  const alfaRomeo = "#94132f";
-  const williams = "#01154a";
-  const haas = "#bababf";
+  const redbull = "#1f2fff";
+  const ferrari = "#ff3f3f";
+  const mercedes = "#3fef9f";
+  const mclaren = "#ffaf0f";
+  const alpine = "#4f9fff";
+  const astonMartin = "#1f6f3f";
+  const alphaTauri = "#6f7f8f";
+  const alfaRomeo = "#8f2f3f";
+  const williams = "#3f4f7f";
+  const haas = "#bfbfbf";
 
   const lineWidth = 3;
   const time = 2100;
